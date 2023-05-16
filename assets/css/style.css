@@ -221,9 +221,13 @@ body {
 }
 
 .img-cover {
+  /*height: 100%;
+  object-fit: cover;*/
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  /* Magic! */
+  max-width: 30vw;
+  
 }
 
 
@@ -545,7 +549,7 @@ body {
 
 .blog-list {
   display: grid;
-  gap: 30px;
+  gap: 10px;
 }
 
 .blog-card {
@@ -911,6 +915,176 @@ body {
   .cta-content { padding-block: 30px; }
 
 
+  /*----------------------------------------*/
+/*  04. Subscribe CSS
+/*----------------------------------------*/
+.subscribe-area {
+  position: relative;
+  z-index: 5;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 575px), only screen and (max-width: 767px) {
+  .subscribe-area {
+    padding-top: 50px;
+  }
+}
+
+.subscribe-wrapper {
+  padding: 80px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 -15px 40px #e5ecff;
+          box-shadow: 0 -15px 40px #e5ecff;
+  border-radius: 125px;
+  z-index: 99;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  margin-top: -110px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 575px), only screen and (max-width: 767px) {
+  .subscribe-wrapper {
+    padding: 30px;
+    border-radius: 30px;
+  }
+}
+
+.subscribe-form {
+  position: relative;
+}
+
+.subscribe-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+  width: 100%;
+  height: 60px;
+  line-height: 58px;
+  border-color: #009024;
+  background-color: #ffffff;
+  padding: 0 70px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 45px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .subscribe-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+    padding: 0 50px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 48px;
+  }
+}
+
+@media only screen and (max-width: 575px), only screen and (max-width: 767px) {
+  .subscribe-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+    width: 100%;
+    padding: 0 40px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 48px;
+  }
+}
+
+.subscribe-form i {
+  position: absolute;
+  left: 40px;
+  top: 15px;
+  font-size: 22px;
+  color: #009024;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .subscribe-form i {
+    left: 25px;
+    top: 10px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .subscribe-form i {
+    font-size: 16px;
+    top: 13px;
+    left: 30px;
+  }
+}
+
+@media only screen and (max-width: 575px), only screen and (max-width: 767px) {
+  .subscribe-form i {
+    font-size: 15px;
+    top: 14px;
+    left: 22px;
+  }
+}
+
+.subscribe-btn {
+  text-align: right;
+}
+
+@media only screen and (max-width: 575px), only screen and (max-width: 767px) {
+  .subscribe-btn {
+    text-align: center;
+  }
+}
+
+.subscribe-btn .btn {
+  padding: 0 70px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .subscribe-btn .btn {
+    padding: 0 50px;
+    font-size: 16px;
+    height: 50px;
+    line-height: 48px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .subscribe-btn .btn {
+    padding: 0 40px;
+    font-size: 15px;
+    height: 50px;
+    line-height: 48px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .subscribe-btn .btn {
+    padding: 0 40px;
+    font-size: 15px;
+    height: 50px;
+    line-height: 48px;
+    margin-top: 15px;
+  }
+}
+
+.subscribe-btn .btn:hover {
+  background-color: #240090;
+  color: #ffffff;
+}
+
+.subscribe-2-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+  border-color: #0AD7F8;
+  background-color: #ffffff;
+}
+
+.subscribe-2-form i {
+  color: #0AD7F8;
+}
+
+.subscribe-2-btn .btn {
+  background-color: #0AD7F8;
+  color: #ffffff;
+}
+
+.subscribe-2-btn .btn:hover {
+  background-color: #213B7B;
+  color: #ffffff;
+}
+
+.subscribe-page-bg {
+  background-color: #EEFBFA;
+}
 
   /**
    * BLOG
@@ -1197,7 +1371,14 @@ body {
     margin-block-end: 0;
   }
 
-
+  .contact-map {
+    margin-top: 50px;
+  }
+  
+  .contact-map iframe {
+    width: 95%;
+    height: 440px;
+  }
 
   /**
    * CTA
