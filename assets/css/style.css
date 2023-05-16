@@ -221,13 +221,11 @@ body {
 }
 
 .img-cover {
-  /*height: 100%;
-  object-fit: cover;*/
   width: 100%;
-  height: auto;
-  /* Magic! */
-  max-width: 30vw;
-  
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+   
 }
 
 
