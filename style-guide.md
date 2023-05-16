@@ -72,7 +72,7 @@ Ionicon
 ## Spacing
 
 ``` css
---section-padding: 120px;
+--section-padding: 20px;
 ```
 
 ## Shadow
